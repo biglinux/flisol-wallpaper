@@ -9,4 +9,4 @@ Target = biglinux-wallpapers-and-icons
 [Action]
 Description = Change default wallpaper
 When = PostTransaction
-Exec = /bin/sh -c 'cp -f big-flisol-wallpaper9.avif /usr/share/wallpapers/Big-retro.jpg'
+Exec = /bin/sh -c 'cp -f /usr/share/wallpapers/big-flisol-wallpaper9.avif /usr/share/wallpapers/Big-retro.jpg'
