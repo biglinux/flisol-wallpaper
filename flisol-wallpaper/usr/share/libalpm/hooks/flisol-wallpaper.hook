@@ -9,7 +9,7 @@ Target = biglinux-wallpapers-and-icons
 [Action]
 Description = Change default wallpaper
 When = PostTransaction
-Exec = sed -i '/^if /,/^fi/c\
+Exec = sed -i '/^if \[\[ "\$(dconf read \/org\/gnome\/desktop\/interface\/color-scheme)" = "'\''prefer-dark'\''" ]]; then/,/^fi$/c\
 files=(\
 "big-flisol-wallpaper10.avif"\
 "big-flisol-wallpaper11.avif"\
@@ -24,6 +24,6 @@ files=(\
 "big-flisol-wallpaper7.avif"\
 "big-flisol-wallpaper8.avif"\
 "big-flisol-wallpaper9.avif"\
-)\
+)
 ' /usr/bin/big-wallpaper-random
 
